@@ -3,7 +3,7 @@ package Adapter;
 import Abstract.ICustomerCheckService;
 import Entities.Customer;
 
-import MersisReference.VHSKPSPublicSoap;
+import mernisReference.VHSKPSPublicSoap;
 
 public class MernisServiceAdapter implements ICustomerCheckService {
     @Override

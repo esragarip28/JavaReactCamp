@@ -10,12 +10,12 @@ public class Main {
 
     BaseCustomerManager customerManager=new NeroCustomerManager();
         try {
-            customerManager.Save(new Customer("esra","garip",1998,"24721847620"));
+            customerManager.Save(new Customer("esra","garip",1998,"24774741474"));
         } catch (Exception e) {
             e.printStackTrace();
         }
         BaseCustomerManager customerManager2=new StarbucksCustomerManager(new MernisServiceAdapter());
-        customerManager2.Save(new Customer("esra","garip",1998,"20711847950"));
+        customerManager2.Save(new Customer("esra","garip",1998,"66681849999"));
 
 
     }
