@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue //we said that how to increase our id value
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //we said that how to increase our id value
     @Column(name="product_id")
     private int id;
 

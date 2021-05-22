@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //with this JpaRepository interface we can make crud operations easily
 public interface ProductDao extends JpaRepository<Product, Integer> {
 
+
 }
