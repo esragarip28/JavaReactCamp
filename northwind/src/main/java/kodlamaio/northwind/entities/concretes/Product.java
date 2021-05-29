@@ -12,8 +12,8 @@ public class Product {
     @Column(name="product_id")
     private int id;
 
-    @Column(name="category_id")
-    private int categoryId;
+    //@Column(name="category_id")
+    // private int categoryId;
 
     @Column(name="product_name")
     private String productName;
@@ -27,13 +27,17 @@ public class Product {
     @Column(name="quantity_per_unit")
     private String quantityPerUnit;
 
+    @ManyToOne
+    @JoinColumn(name="Category_id")
+    private Category category;
+
     public Product() {}
 
     public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStock,
                    String quantityPerUnit) {
         super();
         this.id = id;
-        this.categoryId = categoryId;
+       // this.categoryId = categoryId;
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.unitsInStock = unitsInStock;
@@ -46,12 +50,12 @@ public class Product {
     public void setId(int id) {
         this.id = id;
     }
-    public int getCategoryId() {
-        return categoryId;
-    }
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
+    //public int getCategoryId() {
+        //return categoryId;
+   // }
+   // public void setCategoryId(int categoryId) {
+     //   this.categoryId = categoryId;
+    //}
     public String getProductName() {
         return productName;
     }
