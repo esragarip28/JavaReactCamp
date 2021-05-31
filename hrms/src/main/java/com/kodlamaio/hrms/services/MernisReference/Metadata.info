@@ -4,12 +4,12 @@
     <Version>5.11.5.0</Version>
     <AccountType>Basic</AccountType>
     <LibrariesFolder>easywsdl</LibrariesFolder>
-    <MainClass>AESKPSPublicSoap</MainClass>
+    <MainClass>LPHKPSPublicSoap</MainClass>
   </Info>
   <Settings>
-    <Url>https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?wsdl</Url>
+    <Url>https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?WSDL</Url>
     <ClassPrefix/>
-    <PackageName>gamerSimulation.mernisReference</PackageName>
+    <PackageName>com.kodlamaio.hrms.services.MernisReference</PackageName>
     <AddDocumentation>false</AddDocumentation>
     <EnableAdvancedFeatures>true</EnableAdvancedFeatures>
     <EnableMTOM>false</EnableMTOM>
@@ -29,22 +29,21 @@
     <DetectDictionaries>false</DetectDictionaries>
   </Settings>
   <Files>
-    <File>AESDateTimeConverter.java</File>
-    <File>AESExtendedSoapSerializationEnvelope.java</File>
-    <File>AESHelper.java</File>
-    <File>AESKPSPublicSoap.java</File>
-    <File>AESKPSPublicSoap12.java</File>
-    <File>AESMarshalGuid.java</File>
-    <File>AESStandardDateTimeConverter.java</File>
-    <File>docs/Html/AESKPSPublicSoap.html</File>
-    <File>docs/Html/AESKPSPublicSoap12.html</File>
-    <File>docs/Html/AESKPSPublicSoap12_methods.html</File>
-    <File>docs/Html/AESKPSPublicSoap_methods.html</File>
+    <File>docs/Html/LPHKPSPublicSoap.html</File>
+    <File>docs/Html/LPHKPSPublicSoap12.html</File>
+    <File>docs/Html/LPHKPSPublicSoap12_methods.html</File>
+    <File>docs/Html/LPHKPSPublicSoap_methods.html</File>
     <File>docs/Html/MTOMTransfer.html</File>
     <File>docs/Html/Tips.html</File>
     <File>docs/Index.html</File>
     <File>docs/Styles/Blueprint_Styles/Style.css</File>
-    <File>Metadata.info</File>
+    <File>LPHDateTimeConverter.java</File>
+    <File>LPHExtendedSoapSerializationEnvelope.java</File>
+    <File>LPHHelper.java</File>
+    <File>LPHKPSPublicSoap.java</File>
+    <File>LPHKPSPublicSoap12.java</File>
+    <File>LPHMarshalGuid.java</File>
+    <File>LPHStandardDateTimeConverter.java</File>
   </Files>
   <Libraries>
     <File>ExKsoap2-1.0.3.1.jar</File>

@@ -1,4 +1,4 @@
-package gamerSimulation.mernisReference;
+package com.kodlamaio.hrms.services.MernisReference;
 
 //----------------------------------------------------
 //
@@ -15,7 +15,7 @@ import java.util.Locale;
 
 
 
-public class WPBStandardDateTimeConverter implements WPBDateTimeConverter
+public class LPHStandardDateTimeConverter implements LPHDateTimeConverter
 {
     public java.util.TimeZone TimeZone=java.util.TimeZone.getTimeZone("UTC");
 

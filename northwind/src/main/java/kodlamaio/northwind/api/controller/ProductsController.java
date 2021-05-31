@@ -4,6 +4,7 @@ import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
+import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +31,12 @@ public class ProductsController {
     @GetMapping("/getall") //get method is used to get data
     public DataResult<List<Product>> getAll() {
         return this.productService.getAll();
+
+    }
+    @GetMapping("/getProductWithCategoryDto") //get method is used to get data
+    public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails() {
+
+        return this.productService.getProductWithCategoryDetails();
 
     }
 

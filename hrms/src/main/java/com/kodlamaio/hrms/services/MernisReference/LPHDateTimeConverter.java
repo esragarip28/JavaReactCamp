@@ -1,4 +1,4 @@
-package gamerSimulation.mernisReference;
+package com.kodlamaio.hrms.services.MernisReference;
 
 //----------------------------------------------------
 //
@@ -12,7 +12,7 @@ package gamerSimulation.mernisReference;
 import java.util.Date;
 
 
-public interface WPBDateTimeConverter
+public interface LPHDateTimeConverter
 {
     java.util.Date convertDateTime(String strDate);
     java.util.Date convertTime(String strDate);

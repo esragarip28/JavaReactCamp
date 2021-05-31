@@ -1,4 +1,4 @@
-package gamerSimulation.mernisReference;
+package com.kodlamaio.hrms.services.MernisReference;
 
 //----------------------------------------------------
 //
@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 
-public class WPBMarshalGuid implements Marshal
+public class LPHMarshalGuid implements Marshal
 {
     public java.lang.Object readInstance(XmlPullParser parser, java.lang.String namespace, java.lang.String name,PropertyInfo expected) throws IOException, XmlPullParserException
     {

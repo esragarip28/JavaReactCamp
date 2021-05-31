@@ -1,5 +1,4 @@
 import Abstract.BaseCustomerManager;
-import Abstract.ICustomerCheckService;
 import Adapter.MernisServiceAdapter;
 import Concrete.NeroCustomerManager;
 import Concrete.StarbucksCustomerManager;
@@ -10,12 +9,12 @@ public class Main {
 
     BaseCustomerManager customerManager=new NeroCustomerManager();
         try {
-            customerManager.Save(new Customer("esra","garip",1998,"24774741474"));
+            customerManager.Save(new Customer("esra","garip",1998,"24778745621"));
         } catch (Exception e) {
             e.printStackTrace();
         }
         BaseCustomerManager customerManager2=new StarbucksCustomerManager(new MernisServiceAdapter());
-        customerManager2.Save(new Customer("esra","garip",1998,"66681849999"));
+        customerManager2.Save(new Customer("esra","garip",1998,"12345678850"));
 
 
     }

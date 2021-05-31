@@ -2,14 +2,14 @@ package gamerSimulation.Adapters;
 
 import gamerSimulation.abstracts.GamerCheckService;
 import gamerSimulation.entities.Gamer;
-import gamerSimulation.mernisReference.WPBKPSPublicSoap;
+import gamerSimulation.mernisReference.AESKPSPublicSoap;
 
 public class MernisServiceAdapter implements GamerCheckService {
 
 
     @Override
     public boolean checkIfRealGamer(Gamer gamer) {
-       WPBKPSPublicSoap client=new WPBKPSPublicSoap();
+       AESKPSPublicSoap client=new AESKPSPublicSoap();
         try{
             return client.TCKimlikNoDogrula(Long.valueOf(gamer.getNationalityId()),gamer.getName(),gamer.getSurname(),gamer.getBirthYear());
 
