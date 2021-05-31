@@ -9,7 +9,7 @@ public interface JobSeekerService {
     Result add(JobSeeker jobSeeker,String rePassword);
     Result delete(JobSeeker jobseeker);
     List<JobSeeker> getAll();
-    boolean IsFillIn(JobSeeker jobSeeker);
+    boolean isFillIn(JobSeeker jobSeeker);
 
 
 }

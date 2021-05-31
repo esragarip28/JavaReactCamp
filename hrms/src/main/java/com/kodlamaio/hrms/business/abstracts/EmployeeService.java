@@ -6,7 +6,7 @@ import com.kodlamaio.hrms.entities.concretes.Employee;
 
 import java.util.List;
 
-public interface EmployeeService {
+public interface EmployeeService{
 
     DataResult<List<Employee>> getAll();
     Result add(Employee employee);

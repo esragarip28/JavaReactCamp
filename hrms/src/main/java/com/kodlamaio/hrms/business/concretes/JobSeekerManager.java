@@ -29,7 +29,7 @@ public class JobSeekerManager implements JobSeekerService {
     @Override
     public Result add(JobSeeker jobSeeker, String rePassword) {
 
-        if (!IsFillIn(jobSeeker) && jobSeeker.getPassword().equals(rePassword)) {
+        if (!isFillIn(jobSeeker) && jobSeeker.getPassword().equals(rePassword)) {
             return new ErrorResult("Please fill in all field");
         } else if (!this.mernisVerificationService.isMernisVerified(jobSeeker.getNationalityId(), jobSeeker.getName()
                 , jobSeeker.getSurname(), jobSeeker.getBirthYear())) {
@@ -58,7 +58,7 @@ public class JobSeekerManager implements JobSeekerService {
     }
 
     @Override
-    public boolean IsFillIn(JobSeeker jobSeeker) {
+    public boolean isFillIn(JobSeeker jobSeeker) {
         if(jobSeeker.getName().isBlank()|| jobSeeker.getSurname().isBlank()||
                  jobSeeker.getEmail().isBlank()||String.valueOf(jobSeeker.getBirthYear()).isBlank()||
                 jobSeeker.getNationalityId().isBlank()|| jobSeeker.getPassword().isBlank()){
