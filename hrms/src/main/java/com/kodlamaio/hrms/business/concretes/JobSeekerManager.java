@@ -9,6 +9,7 @@ import com.kodlamaio.hrms.core.utilities.results.Result;
 import com.kodlamaio.hrms.core.utilities.results.SuccessResult;
 import com.kodlamaio.hrms.dataAccess.abstracts.JobSeekerDao;
 import com.kodlamaio.hrms.entities.concretes.JobSeeker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class JobSeekerManager implements JobSeekerService {
     private MernisVerificationService mernisVerificationService;
     private EmailVerificationService emailVerificationService;
 
+    @Autowired
     public JobSeekerManager(JobSeekerDao jobSeekerDao) {
 
         this.jobSeekerDao = jobSeekerDao;

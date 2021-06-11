@@ -1,4 +1,4 @@
-package com.kodlamaio.hrms.services.MernisReference;
+package com.kodlamaio.hrms.mernisReference;
 
 //----------------------------------------------------
 //
@@ -13,18 +13,22 @@ package com.kodlamaio.hrms.services.MernisReference;
 
 import org.ksoap2.HeaderProperty;
 import org.ksoap2.serialization.*;
+import org.ksoap2.transport.*;
+import org.kxml2.kdom.Element;
 
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
-public class LPHKPSPublicSoap
+public class EDOKPSPublicSoap12
 {
-    interface LPHIWcfMethod
+    interface EDOIWcfMethod
     {
-        LPHExtendedSoapSerializationEnvelope CreateSoapEnvelope() throws java.lang.Exception;
+        EDOExtendedSoapSerializationEnvelope CreateSoapEnvelope() throws java.lang.Exception;
 
-        java.lang.Object ProcessResult(LPHExtendedSoapSerializationEnvelope __envelope,java.lang.Object result) throws java.lang.Exception;
+        java.lang.Object ProcessResult(EDOExtendedSoapSerializationEnvelope __envelope,java.lang.Object result) throws java.lang.Exception;
     }
 
     String url="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx";
@@ -35,14 +39,14 @@ public class LPHKPSPublicSoap
     public boolean enableLogging;
 
 
-    public LPHKPSPublicSoap(){}
+    public EDOKPSPublicSoap12(){}
 
-    public LPHKPSPublicSoap(String url)
+    public EDOKPSPublicSoap12(String url)
     {
         this.url = url;
     }
 
-    public LPHKPSPublicSoap(String url,int timeOut)
+    public EDOKPSPublicSoap12(String url,int timeOut)
     {
         this.url = url;
         this.timeOut=timeOut;
@@ -75,15 +79,15 @@ public class LPHKPSPublicSoap
         return null;
     }
 
-    protected LPHExtendedSoapSerializationEnvelope createEnvelope()
+    protected EDOExtendedSoapSerializationEnvelope createEnvelope()
     {
-        LPHExtendedSoapSerializationEnvelope envelope= new LPHExtendedSoapSerializationEnvelope(LPHExtendedSoapSerializationEnvelope.VER11);
+        EDOExtendedSoapSerializationEnvelope envelope= new EDOExtendedSoapSerializationEnvelope(EDOExtendedSoapSerializationEnvelope.VER12);
         envelope.enableLogging = enableLogging;
     
         return envelope;
     }
 
-    protected java.util.List sendRequest(String methodName,LPHExtendedSoapSerializationEnvelope envelope,org.ksoap2.transport.Transport transport ,com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile profile )throws java.lang.Exception
+    protected java.util.List sendRequest(String methodName,EDOExtendedSoapSerializationEnvelope envelope,org.ksoap2.transport.Transport transport ,com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile profile )throws java.lang.Exception
     {
         if(transport instanceof com.easywsdl.exksoap2.transport.AdvancedHttpTransportSE )
         {
@@ -95,7 +99,7 @@ public class LPHKPSPublicSoap
         }
     }
 
-    java.lang.Object getResult(java.lang.Class destObj,java.lang.Object source,String resultName,LPHExtendedSoapSerializationEnvelope __envelope) throws java.lang.Exception
+    java.lang.Object getResult(java.lang.Class destObj,java.lang.Object source,String resultName,EDOExtendedSoapSerializationEnvelope __envelope) throws java.lang.Exception
     {
         if(source==null)
         {
@@ -139,11 +143,11 @@ public class LPHKPSPublicSoap
     public Boolean TCKimlikNoDogrula(final Long TCKimlikNo,final String Ad,final String Soyad,final Integer DogumYili) throws java.lang.Exception
     {
         com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile __profile = new com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile();
-        return (Boolean)execute(new LPHIWcfMethod()
+        return (Boolean)execute(new EDOIWcfMethod()
         {
             @Override
-            public LPHExtendedSoapSerializationEnvelope CreateSoapEnvelope(){
-                LPHExtendedSoapSerializationEnvelope __envelope = createEnvelope();
+            public EDOExtendedSoapSerializationEnvelope CreateSoapEnvelope(){
+                EDOExtendedSoapSerializationEnvelope __envelope = createEnvelope();
                 SoapObject __soapReq = new SoapObject("http://tckimlik.nvi.gov.tr/WS", "TCKimlikNoDogrula");
                 __envelope.setOutputSoapObject(__soapReq);
                 
@@ -176,7 +180,7 @@ public class LPHKPSPublicSoap
             }
             
             @Override
-            public java.lang.Object ProcessResult(LPHExtendedSoapSerializationEnvelope __envelope,java.lang.Object __result)throws java.lang.Exception {
+            public java.lang.Object ProcessResult(EDOExtendedSoapSerializationEnvelope __envelope,java.lang.Object __result)throws java.lang.Exception {
                 SoapObject __soap=(SoapObject)__result;
                 java.lang.Object obj = __soap.getProperty("TCKimlikNoDogrulaResult");
                 if (obj instanceof SoapPrimitive)
@@ -192,11 +196,11 @@ public class LPHKPSPublicSoap
         },"http://tckimlik.nvi.gov.tr/WS/TCKimlikNoDogrula",__profile);
     }
 
-    protected java.lang.Object execute(LPHIWcfMethod wcfMethod,String methodName,com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile profile) throws java.lang.Exception
+    protected java.lang.Object execute(EDOIWcfMethod wcfMethod,String methodName,com.easywsdl.exksoap2.ws_specifications.profile.WS_Profile profile) throws java.lang.Exception
     {
         org.ksoap2.transport.Transport __httpTransport=createTransport();
         __httpTransport.debug=enableLogging;
-        LPHExtendedSoapSerializationEnvelope __envelope=wcfMethod.CreateSoapEnvelope();
+        EDOExtendedSoapSerializationEnvelope __envelope=wcfMethod.CreateSoapEnvelope();
         try
         {
             sendRequest(methodName, __envelope, __httpTransport,profile);
@@ -222,7 +226,7 @@ public class LPHKPSPublicSoap
     }
 
 
-    protected java.lang.Exception convertToException(org.ksoap2.SoapFault fault,LPHExtendedSoapSerializationEnvelope envelope)
+    protected java.lang.Exception convertToException(org.ksoap2.SoapFault fault,EDOExtendedSoapSerializationEnvelope envelope)
     {
         org.ksoap2.SoapFault newException = fault;
         return newException;

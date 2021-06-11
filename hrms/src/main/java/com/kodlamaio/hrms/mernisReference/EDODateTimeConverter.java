@@ -1,4 +1,4 @@
-package com.kodlamaio.hrms.services.MernisReference;
+package com.kodlamaio.hrms.mernisReference;
 
 //----------------------------------------------------
 //
@@ -12,7 +12,7 @@ package com.kodlamaio.hrms.services.MernisReference;
 import java.util.Date;
 
 
-public interface LPHDateTimeConverter
+public interface EDODateTimeConverter
 {
     java.util.Date convertDateTime(String strDate);
     java.util.Date convertTime(String strDate);

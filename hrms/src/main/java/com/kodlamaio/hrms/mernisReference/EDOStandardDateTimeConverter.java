@@ -1,4 +1,4 @@
-package com.kodlamaio.hrms.services.MernisReference;
+package com.kodlamaio.hrms.mernisReference;
 
 //----------------------------------------------------
 //
@@ -15,7 +15,7 @@ import java.util.Locale;
 
 
 
-public class LPHStandardDateTimeConverter implements LPHDateTimeConverter
+public class EDOStandardDateTimeConverter implements EDODateTimeConverter
 {
     public java.util.TimeZone TimeZone=java.util.TimeZone.getTimeZone("UTC");
 

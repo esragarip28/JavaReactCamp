@@ -1,4 +1,4 @@
-package com.kodlamaio.hrms.services.MernisReference;
+package com.kodlamaio.hrms.mernisReference;
 
 //----------------------------------------------------
 //
@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 
-public class LPHMarshalGuid implements Marshal
+public class EDOMarshalGuid implements Marshal
 {
     public java.lang.Object readInstance(XmlPullParser parser, java.lang.String namespace, java.lang.String name,PropertyInfo expected) throws IOException, XmlPullParserException
     {
