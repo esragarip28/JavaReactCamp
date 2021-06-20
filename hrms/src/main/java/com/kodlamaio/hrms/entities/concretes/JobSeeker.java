@@ -1,5 +1,6 @@
 package com.kodlamaio.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -28,6 +29,9 @@ public class JobSeeker extends User{
 
     @Column(name="birthYear")
     private int birthYear;
+
+    @OneToOne(mappedBy = "jobSeeker")
+    private Resume resume;
 
 
 }

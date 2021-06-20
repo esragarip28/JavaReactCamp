@@ -5,6 +5,7 @@ import com.kodlamaio.hrms.core.utilities.results.Result;
 import com.kodlamaio.hrms.entities.concretes.JobAdvertisement;
 import com.kodlamaio.hrms.entities.dtos.JobAdvertisementListDto;
 
+
 import java.util.List;
 
 public interface JobAdvertisementService {

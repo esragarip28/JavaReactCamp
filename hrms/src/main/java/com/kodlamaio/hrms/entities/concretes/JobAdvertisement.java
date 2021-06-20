@@ -55,15 +55,15 @@ public class JobAdvertisement {
     @Column(name = "active")
     private boolean isActive;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="employer_id")
     private Employer employer;
 
-    @ManyToOne(optional = false,fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="job_position_id")
     private JobPosition jobPosition;
 
